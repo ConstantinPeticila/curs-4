@@ -45,7 +45,7 @@ public class UserRepository {
     public List<User> deleteAllUsersByNameFromDB(String name) {
 
         List<User> userToDelete = userTable.stream()
-                .filter(user -> user.getNume().equals(name))
+                .filter(user -> user.getFirstname().equals(name))
                 .collect(Collectors.toList());
 
         userTable.removeAll(userToDelete);
